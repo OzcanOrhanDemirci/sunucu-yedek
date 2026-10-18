@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Sunucu Yedek</title>
+  <meta name="description" content="Kişisel sunucular için şifreli yedek aracı. Yedekler sahibinin Google Drive hesabına yalnız şifreli olarak gider.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" hreflang="en" href="en/">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/><path d="M13.5 16.5l1.5 1.5 3-3"/></svg>
+        Sunucu Yedek
+      </a>
+      <nav class="lang" aria-label="Dil">
+        <span aria-current="page">TR</span>
+        <a href="en/" hreflang="en" lang="en">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Sunucu Yedek</h1>
+      <p class="lead">Kendi sunucularım için kullandığım, şifreli yedek alan kişisel bir araç.</p>
+
+      <h2>Ne yapar</h2>
+      <ol class="steps">
+        <li><strong>Yedeği alır.</strong> Sunucudaki verinin bir kopyasını sunucunun üzerinde çıkarır.</li>
+        <li><strong>Şifreler.</strong> Kopya sunucudan çıkmadan önce AES&#8209;256 ile şifrelenir. Şifre anahtarı yalnız sunucunun sahibindedir.</li>
+        <li><strong>Saklar.</strong> Şifreli dosya, sahibinin Google Drive hesabında aracın kendi açtığı bir klasöre yüklenir. Saklama süresi dolan yedekler silinir.</li>
+      </ol>
+
+      <h2>Google Drive erişimi</h2>
+      <p>Araç Google Drive'a yalnız <code>drive.file</code> izniyle bağlanır. Bu izinle yalnız kendi oluşturduğu dosya ve klasörleri görebilir; Drive'daki başka hiçbir dosyayı göremez, okuyamaz, değiştiremez.</p>
+      <p>Google'dan alınan veri başka bir yere aktarılmaz, satılmaz ve reklam için kullanılmaz. Ayrıntılar <a href="gizlilik.html">gizlilik politikasında</a>.</p>
+
+      <h2>Kimin için</h2>
+      <p class="note">Bu araç yalnız sahibinin kendi sunucularında kullanılır. Herkese açık bir hizmet değildir; hesap açılmaz, başka kullanıcı kabul edilmez.</p>
+
+      <ul class="links">
+        <li><a href="gizlilik.html">Gizlilik politikası</a></li>
+        <li><a href="https://github.com/OzcanOrhanDemirci/sunucu-yedek">Bu sitenin kaynağı</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Özcan Orhan Demirci</span>
+      <a href="gizlilik.html">Gizlilik</a>
+    </div>
+  </footer>
+</body>
+</html>
